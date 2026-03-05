@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gingiris - Growth Playbooks for AI & SaaS</title>
+    <meta name="description" content="Battle-tested playbooks for product launches, open source marketing, and B2B growth. By Iris, ex-AFFiNE COO (60k+ GitHub stars).">
+    <meta name="keywords" content="product launch, Product Hunt, open source marketing, B2B growth, SaaS, startup, growth playbook">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gingiris - Growth Playbooks">
+    <meta property="og:description" content="Battle-tested playbooks for AI & SaaS growth. Product Hunt #1 Daily x30.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gingiris.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gingiris - Growth Playbooks">
+    <meta name="twitter:description" content="Battle-tested playbooks for AI & SaaS growth.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫚</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg: #0a0a0a;
+            --text: #fafafa;
+            --text-muted: #a1a1aa;
+            --border: #27272a;
+            --accent: #f97316;
+            --card-bg: #18181b;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        
+        .author {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--card-bg);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .author a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .playbooks {
+            display: grid;
+            gap: 24px;
+            padding: 40px 0 80px;
+        }
+        
+        .playbook {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: block;
+        }
+        
+        .playbook:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .playbook-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .playbook-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .playbook-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .playbook-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .playbook-desc {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .playbook-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            padding: 4px 12px;
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--accent);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--text);
+        }
+        
+        @media (max-width: 640px) {
+            h1 { font-size: 1.75rem; }
+            .stats { gap: 24px; }
+            .playbook { padding: 24px; }
+            .playbook-title { font-size: 1.25rem; }
+        }
+    </style>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Gingiris",
+        "url": "https://gingiris.com",
+        "description": "Growth playbooks for AI & SaaS startups",
+        "founder": {
+            "@type": "Person",
+            "name": "Iris",
+            "alternateName": "生姜iris"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🫚</div>
+            <h1>Growth Playbooks</h1>
+            <p class="subtitle">
+                Battle-tested strategies for product launches, open source marketing, and B2B growth. 
+                Free, open source, and ready to use.
+            </p>
+            <div class="author">
+                By <a href="https://twitter.com/iris_carrot" target="_blank">Iris (生姜iris)</a> · Ex-AFFiNE COO
+            </div>
+        </header>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">30×</div>
+                <div class="stat-label">Product Hunt #1 Daily</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">60k+</div>
+                <div class="stat-label">GitHub Stars</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">100+</div>
+                <div class="stat-label">Countries Reached</div>
+            </div>
+        </div>
+        
+        <section class="playbooks">
+            <a href="https://github.com/Gingiris/gingiris-launch" class="playbook" target="_blank">
+                <div class="playbook-header">
+                    <span class="playbook-icon">🚀</span>
+                    <div>
+                        <h2 class="playbook-title">Product Launch Playbook</h2>
+                        <p class="playbook-subtitle">AI Product Global Launch Guide</p>
+                    </div>
+                </div>
+                <p class="playbook-desc">
+                    Complete SOP for launching AI products globally. Product Hunt strategy, KOL outreach, 
+                    UGC growth, Reddit marketing. The exact playbook that achieved #1 Daily 30 times.
+                </p>
+                <div class="playbook-tags">
+                    <span class="tag">Product Hunt</span>
+                    <span class="tag">KOL Outreach</span>
+                    <span class="tag">Launch Strategy</span>
+                    <span class="tag">UGC</span>
+                </div>
+            </a>
+            
+            <a href="https://github.com/Gingiris/gingiris-opensource" class="playbook" target="_blank">
+                <div class="playbook-header">
+                    <span class="playbook-icon">⭐</span>
+                    <div>
+                        <h2 class="playbook-title">Open Source Playbook</h2>
+                        <p class="playbook-subtitle">OSS Launch Marketing Guide</p>
+                    </div>
+                </div>
+                <p class="playbook-desc">
+                    How we grew AFFiNE from 0 to 60k+ GitHub stars. GitHub optimization, developer community 
+                    building, Reddit strategy, Hacker News tactics, and KOL partnerships.
+                </p>
+                <div class="playbook-tags">
+                    <span class="tag">GitHub Stars</span>
+                    <span class="tag">Developer Marketing</span>
+                    <span class="tag">Community</span>
+                    <span class="tag">OSS</span>
+                </div>
+            </a>
+            
+            <a href="https://github.com/Gingiris/gingiris-b2b-growth" class="playbook" target="_blank">
+                <div class="playbook-header">
+                    <span class="playbook-icon">📈</span>
+                    <div>
+                        <h2 class="playbook-title">B2B Growth Playbook</h2>
+                        <p class="playbook-subtitle">Full-Lifecycle SaaS Growth Guide</p>
+                    </div>
+                </div>
+                <p class="playbook-desc">
+                    From PMF validation to ecosystem growth. Real case studies from HeyGen, Deel, Vercel, 
+                    Supabase. PLG/SLG strategies, affiliate marketing, channel partnerships.
+                </p>
+                <div class="playbook-tags">
+                    <span class="tag">B2B SaaS</span>
+                    <span class="tag">PLG</span>
+                    <span class="tag">Partnerships</span>
+                    <span class="tag">Case Studies</span>
+                </div>
+            </a>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>
+                MIT Licensed · 
+                <a href="https://github.com/Gingiris" target="_blank">GitHub</a> · 
+                <a href="https://twitter.com/iris_carrot" target="_blank">Twitter</a> · 
+                <a href="https://www.xiaohongshu.com/user/profile/生姜iris" target="_blank">小红书</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
