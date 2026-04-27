@@ -194,6 +194,128 @@
             color: var(--accent);
         }
         
+        /* ── ClawHub AI Skills section ── */
+        .clawhub-section {
+            margin: 48px 0 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 1px solid #4f46e5;
+            border-radius: 16px;
+        }
+
+        .clawhub-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .clawhub-header h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .clawhub-badge {
+            padding: 3px 10px;
+            background: rgba(99, 102, 241, 0.25);
+            border: 1px solid #6366f1;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color: #a5b4fc;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .clawhub-desc {
+            color: #94a3b8;
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .clawhub-desc a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+
+        .clawhub-desc a:hover {
+            color: #a5b4fc;
+            text-decoration: underline;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .skill-card {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(99,102,241,0.3);
+            border-radius: 12px;
+            padding: 18px 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .skill-card:hover {
+            border-color: #6366f1;
+            background: rgba(99,102,241,0.1);
+            transform: translateY(-2px);
+        }
+
+        .skill-card-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .skill-card-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 4px;
+        }
+
+        .skill-card-desc {
+            font-size: 0.78rem;
+            color: #64748b;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        .skill-card-installs {
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .clawhub-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            background: #4f46e5;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .clawhub-cta:hover {
+            background: #6366f1;
+        }
+
+        /* ── end ClawHub section ── */
+
         footer {
             text-align: center;
             padding: 40px 0;
@@ -268,6 +390,52 @@
             <p>🚀 <strong>New:</strong> <a href="https://gingiris.github.io/growth-tools/" target="_blank">100+ Free Growth Tools</a> for Product Hunt launches, GitHub outreach, and SEO — hand-picked for AI/SaaS founders.</p>
         </div>
         
+        <!-- ClawHub AI Skills Section -->
+        <section class="clawhub-section">
+            <div class="clawhub-header">
+                <span style="font-size:1.6rem;">🤖</span>
+                <h2>Use These Playbooks as AI Skills</h2>
+                <span class="clawhub-badge">Cola / OpenClaw</span>
+            </div>
+            <p class="clawhub-desc">
+                All playbooks are available as installable AI skills on 
+                <a href="https://clawhub.ai/u/gingiris" target="_blank">ClawHub</a> — 
+                the skill registry for Cola and OpenClaw agents. Install once, invoke anytime inside your AI agent 
+                with a single command. No copy-pasting, no context switching.
+            </p>
+
+            <div class="skills-grid">
+                <a href="https://clawhub.ai/s17chgpcnapq54m54xxkc8ge4983hzj2/gingiris-launch" class="skill-card" target="_blank">
+                    <div class="skill-card-icon">🚀</div>
+                    <div class="skill-card-title">GTM & Launch Playbook</div>
+                    <div class="skill-card-desc">Product Hunt #1 tactics, KOL outreach, hour-by-hour launch day SOP.</div>
+                    <div class="skill-card-installs">511 installs · 1 ★</div>
+                </a>
+                <a href="https://clawhub.ai/s17chgpcnapq54m54xxkc8ge4983hzj2/gingiris-b2b-growth" class="skill-card" target="_blank">
+                    <div class="skill-card-icon">📈</div>
+                    <div class="skill-card-title">B2B SaaS Growth</div>
+                    <div class="skill-card-desc">PMF → $10M ARR. PLG/SLG frameworks, HeyGen & Deel case studies.</div>
+                    <div class="skill-card-installs">621 installs</div>
+                </a>
+                <a href="https://clawhub.ai/s17chgpcnapq54m54xxkc8ge4983hzj2/gingiris-opensource" class="skill-card" target="_blank">
+                    <div class="skill-card-icon">⭐</div>
+                    <div class="skill-card-title">Open Source Marketing</div>
+                    <div class="skill-card-desc">0 → 10k+ GitHub stars. AFFiNE's 33k-star OSS launch playbook.</div>
+                    <div class="skill-card-installs">499 installs</div>
+                </a>
+                <a href="https://clawhub.ai/s17chgpcnapq54m54xxkc8ge4983hzj2/gingiris-aso-growth" class="skill-card" target="_blank">
+                    <div class="skill-card-icon">📱</div>
+                    <div class="skill-card-title">ASO & App Growth</div>
+                    <div class="skill-card-desc">Top 10 App Store ranking without paid ads. UGC matrix + TikTok strategy.</div>
+                    <div class="skill-card-installs">305 installs</div>
+                </a>
+            </div>
+
+            <a href="https://clawhub.ai/u/gingiris" class="clawhub-cta" target="_blank">
+                Browse all 39 skills on ClawHub →
+            </a>
+        </section>
+
         <section class="playbooks">
             <a href="https://github.com/Gingiris/gingiris-launch" class="playbook" target="_blank">
                 <div class="playbook-header">
